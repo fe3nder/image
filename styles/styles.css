@@ -4,10 +4,295 @@ header {
 
 }
 .header_top_top {
-    height: 132px;
-    border: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding-top: 5px;
+    height: 54%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
 }
 .logo {
- 
+ width:80px;
+ height: 42px;
+ padding-left: 20px;
+ display: flex;
+ align-items: left;
 }
-
+.header-wrapper {
+    width: 100%;
+    height: 100%;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+}
+.search-line {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.header-input {
+    height: 28px;
+    min-width: 39%;
+    margin-top: -5px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    float: left;
+    border-radius: 2px 0 0 2px;
+}
+.header-input::placeholder {
+    color: #acacac;
+    font-family: "Segoe UI", serif;
+    font-size: 14px;
+}
+.button {
+    height: 32px;
+    margin-top:-5px ;
+    padding:2px 15px 4px;
+    background-color:white;
+    border:1px solid lightgray;
+    border-left:none;
+    border-radius: 0 2px 2px 0;
+    float: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-weight :  bold;
+    font-size : 14px;
+}
+.icon{
+    background-color: black;
+    border-radius: 50%;
+    height:40 ;
+    width:40px ;
+    margin-top: -5px;
+}
+.under-header-nav{
+    height: 42%;
+}
+.under-header-nav nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left:222px;
+}
+nav > a{
+    margin-right:3.5%;
+    color: #5b5b5b;
+    text-decoration: none;
+    padding: 19px 0;
+    font-family: "Segoe UI", serif;
+    font-size: 13px;
+}
+nav > a:hover {
+    border-bottom: 2px solid #212121;
+    padding-bottom: 17px;
+}
+main {
+    border: 1px solid lightgray;
+    border-bottom:none;
+    border-top:none;
+}
+.main-wrapp{
+    padding-top:20px;
+    margin-left: 18%;
+}
+.main-container-org {
+    display: flex;
+    align-items: center;
+}
+.main-container-org h1{
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", serif;
+    font-weight: 600;
+    margin-right: 15px;
+}
+.main-container-org i{
+    font-size: 12px;
+    margin-right: 14px;
+}
+.main-container-org a{
+    text-decoration: none;
+    font-family: "Segoe UI", serif;
+    font-size: 14px;
+    margin-top: 14px;
+    margin-left: 5px;
+}
+.organizations_name{
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+    font-family: "Segoe UI", serif;
+    font-size: 14px;
+}
+.organizations_name a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    border: 1px solid lightgray;
+}
+.organizations_name a:nth-child(even){
+    border-left:none;
+    border-right:none;
+}
+.organizations_name a:first-child {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.organizations_name a:last-child {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.organizations_name a:hover {
+    background-color: #ffeb9a;
+}
+.organization-commit{
+    font-family: "Segoe UI", serif, Arial, Helvetica, sans-serif;
+}
+.organization_count {
+    display: flex;
+    align-items: center;
+}
+.organization_count h2 {
+    font-weight: 500;
+}
+.organization_count .organization_raiting {
+    margin-top: 5px;
+    margin-left: 15px;
+    padding: 1px 5px;
+    background-color: #fac900;
+    color: #9c6f00;
+}
+.organization_count:after {
+    content:"";
+    margin-top: 5px;
+    display: inline-block;
+    border: 11.5px solid transparent;
+    border-left: 8px solid #fac900;
+}
+article{
+    max-width: 433px;
+    margin-top: 30px;
+}
+article:first-child {
+    margin-top: 0;
+}
+article .main_content {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.main_content .main-commentaries-icon {
+    height: 32px;
+    width: 32px;
+    background-color: black;
+    border-radius: 50%;
+}
+.main_content span {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.main_content .list-item {
+    font-size: 12px;
+    color: #acacac;
+}
+.main_content .list-item:before {
+    content: "·";
+    margin-right: 5px;
+}
+.main_content_info i {
+    font-size: 20px;
+    margin-top: -5px;
+    margin-left: 5px;
+    color: #89753e;
+}
+article .comment-content {
+    margin-top: -10px;
+}
+article .comment-content p {
+    font-size: 14px;
+}
+article .comment-content.content_under {
+    text-decoration: none;
+    color: #807f87;
+    font-size: 14px;
+}
+article .comment-content .content_under:before {
+    content: "\00a0\00a0";
+}
+article .comment-func {
+    display: flex;
+    align-items: center;
+}
+article .comment-func button {
+    padding: 4px 8px;
+    background-color: #fefefe;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin-right: 20px;
+}
+article .comment-func button:focus {
+    background-color: #fae5a1;
+    outline: none;
+}
+article .comment-func a {
+    text-decoration: none;
+    color: #807f87;
+    font-size: 14px;
+}
+.response_to_comment {
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+}
+.response_to_comment label {
+    display: block;
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.response_to_comment .response_input {
+    position: relative;
+}
+.response_to_comment .response_input textarea {
+    height: 100px;
+    width: 98.5%;
+    resize: none;
+}
+.response_to_comment .response_input button {
+    position: absolute;
+    top: 5px;
+    left: calc(96% - 10px);
+    background-color: transparent;
+    border: none;
+}
+.response_to_comment .response_input button:focus {
+    outline: none;
+}
+.response_to_comment .response_input button i {
+    font-size: 20px;
+}
+.response_to_comment .publish_response {
+    align-self: flex-end;
+    padding: 5px 22px;
+    background-color: #ededed;
+    border: none;
+    border-radius: 2px;
+    margin-top: 5px;
+    color: #979797;
+}
+.show_all_reviews {
+    width: 430px;
+    padding: 9px 0;
+    border: none;
+    border-radius: 2px;
+    margin-top: 20px;
+    background-color: #ededed;
+    font-weight: bold;
+}
+.last-block {
+    height: 50px;
+    border: 1px solid lightgray;
+    border-top: none;
+}
