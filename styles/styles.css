@@ -11,12 +11,7 @@ header {
     align-items: center;
     padding-left: 15px;
 }
-.logo {
- width:80px;
- height: 42px;
- padding-left: 20px;
- display: flex;
- align-items: left;
+
 }
 .header-wrapper {
     width: 100%;
@@ -65,6 +60,8 @@ header {
     height:40 ;
     width:40px ;
     margin-top: -5px;
+    display: flex;
+    align-items: flex-end;
 }
 .under-header-nav{
     height: 42%;
@@ -170,7 +167,7 @@ main {
     border: 11.5px solid transparent;
     border-left: 8px solid #fac900;
 }
-article{
+article {
     max-width: 433px;
     margin-top: 30px;
 }
@@ -178,7 +175,8 @@ article:first-child {
     margin-top: 0;
 }
 article .main_content {
-    display: flex;
+    display: block;
+    margin: -5px;
     align-items: center;
     margin-top: 5px;
 }
