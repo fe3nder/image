@@ -1,9 +1,10 @@
+/*Шапка*/
 header {
- height: 133px;
- border: 1px solid grey;
-
+    height: 132px;
+    border: 1px solid lightgray;
 }
-.header_top_top {
+/*Стили верхнего уровня шапки*/
+.up_sub_header {
     border-bottom: 1px solid lightgray;
     padding-top: 5px;
     height: 54%;
@@ -11,22 +12,21 @@ header {
     align-items: center;
     padding-left: 15px;
 }
-
-.header-wrapper {
+.up_sub_header_wrapper {
     width: 100%;
     height: 100%;
     padding-right: 28px;
     display: flex;
     align-items: center;
 }
-.search-line {
+.search_block {
     width: 95%;
     height: 100%;
     display: flex;
     align-items: center;
     margin-left: 15px;
 }
-.header-input {
+.up_header_search_input {
     height: 28px;
     min-width: 39%;
     margin-top: -5px;
@@ -35,44 +35,43 @@ header {
     float: left;
     border-radius: 2px 0 0 2px;
 }
-.header-input::placeholder {
+.up_header_search_input::placeholder {
     color: #acacac;
     font-family: "Segoe UI", serif;
     font-size: 14px;
 }
-.button {
+.search_btn {
     height: 32px;
-    margin-top:-5px ;
-    padding:2px 15px 4px;
-    background-color:white;
-    border:1px solid lightgray;
-    border-left:none;
-    border-radius: 0 2px 2px 0;
+    margin-top: -5px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-left: none;
     float: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,serif, "Segoe UI";
-    font-weight:  bold;
+    font-weight: bold;
+    padding: 2px 14px 4px;
+    border-radius: 0 2px 2px 0;
+    font-family: "Segoe UI", serif;
     font-size: 14px;
 }
-.icon{
+.user_avatar {
     background-color: black;
     border-radius: 50%;
-    height:40 ;
-    width:40px ;
+    height: 40px;
+    width: 40px;
     margin-top: -5px;
-    display: flex;
-    align-items: flex-end;
 }
-.under-header-nav{
+/*Стили нижнего уровня шапки*/
+.down_sub_header {
     height: 42%;
 }
-.under-header-nav nav {
+.down_sub_header nav {
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left:222px;
+    padding-left: 18.2%;/*222px*/
 }
-nav > a{
-    margin-right:3.5%;
+nav > a {
+    margin-right: 3.5%;
     color: #5b5b5b;
     text-decoration: none;
     padding: 19px 0;
@@ -83,38 +82,43 @@ nav > a:hover {
     border-bottom: 2px solid #212121;
     padding-bottom: 17px;
 }
+
+/*Контент*/
+/*Стили контента*/
 main {
     border: 1px solid lightgray;
-    border-bottom:none;
-    border-top:none;
+    border-bottom: none;
+    border-top: none;
 }
-.main-wrapp{
-    padding-top:20px;
+.content_wrapper {
+    padding-top: 20px;
     margin-left: 18%;
 }
-.main-container-org {
+/*Название организации*/
+.organization_name {
     display: flex;
     align-items: center;
 }
-.main-container-org h1{
+.organization_name h1 {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", serif;
     font-weight: 600;
     margin-right: 15px;
 }
-.main-container-org i{
+.organization_name i {
     font-size: 12px;
-    margin-right: 14px;
+    margin-top: 14px;
 }
-.main-container-org a{
+.organization_name a {
     text-decoration: none;
     font-family: "Segoe UI", serif;
     font-size: 14px;
     margin-top: 14px;
     margin-left: 5px;
 }
-.organizations_name{
+/*Информация об организации*/
+.organization_info {
     display: flex;
     align-items: center;
     margin-top: 28px;
@@ -127,9 +131,9 @@ main {
     padding: 5px 15px;
     border: 1px solid lightgray;
 }
-.organization_info a:nth-child(even){
-    border-left:none;
-    border-right:none;
+.organization_info a:nth-child(even) {
+    border-left: none;
+    border-right: none;
 }
 .organization_info a:first-child {
     border-bottom-left-radius: 3px;
@@ -142,30 +146,33 @@ main {
 .organization_info a:hover {
     background-color: #ffeb9a;
 }
-.organization-commit{
-    font-family: "Segoe UI", serif, Arial, Helvetica, sans-serif;
+/*Количество отзывов об организации*/
+.organization_reviews {
+    font-family: "Segoe UI", serif;
 }
-.organization_count {
+.reviews_count {
     display: flex;
     align-items: center;
+
 }
-.organization_count h2 {
+.reviews_count h2 {
     font-weight: 500;
 }
-.organization_count .organization_raiting {
+.reviews_count .organization_rating {
     margin-top: 5px;
     margin-left: 15px;
     padding: 1px 5px;
     background-color: #fac900;
     color: #9c6f00;
 }
-.organization_count:after {
+.reviews_count:after {
     content:"";
     margin-top: 5px;
     display: inline-block;
     border: 11.5px solid transparent;
     border-left: 8px solid #fac900;
 }
+/*Отзывы*/
 article {
     max-width: 433px;
     margin-top: 30px;
@@ -173,104 +180,107 @@ article {
 article:first-child {
     margin-top: 0;
 }
-article .main_content {
-    display: block;
-    margin: -5px;
+/*Главная информация отзыва*/
+article .main_comment_info {
+    display: flex;
     align-items: center;
     margin-top: 5px;
 }
-.main_content .main-reviews-icon {
+.main_comment_info .comment_user_avatar {
     height: 32px;
     width: 32px;
     background-color: black;
     border-radius: 50%;
 }
-.main_content span {
+.main_comment_info span {
     margin-left: 10px;
     font-size: 14px;
     font-weight: 600;
 }
-.main_content .list-item {
+.main_comment_info .list-item {
     font-size: 12px;
     color: #acacac;
 }
-.main_content .list-item:before {
+.main_comment_info .list-item:before {
     content: "·";
     margin-right: 5px;
 }
-.main_content_info i {
+.main_comment_info i {
     font-size: 20px;
     margin-top: -5px;
     margin-left: 5px;
     color: #89753e;
 }
-article .reviews-content {
+/*Текстовая часть отзыва*/
+article .comment_message {
     margin-top: -10px;
 }
-article .reviews-content p {
+article .comment_message p {
     font-size: 14px;
 }
-article .reviews-content.content_under {
+article .comment_message .comment_message_more {
     text-decoration: none;
     color: #807f87;
     font-size: 14px;
 }
-article .reviews-content .content_under:before {
+article .comment_message .comment_message_more:before {
     content: "\00a0\00a0";
 }
-article .reviews-func {
+/*Действия с отзывами*/
+article .comment_actions {
     display: flex;
     align-items: center;
 }
-article .reviews-func button {
+article .comment_actions button {
     padding: 4px 8px;
     background-color: #fefefe;
     border: 1px solid lightgray;
     border-radius: 2px;
     margin-right: 20px;
 }
-article .reviews-func button:focus {
+article .comment_actions button:focus {
     background-color: #fae5a1;
     outline: none;
 }
-article .reviews-func a {
+article .comment_actions a {
     text-decoration: none;
     color: #807f87;
     font-size: 14px;
 }
-.response_to_reviews {
+/*Ответ пользователя на отзыв*/
+.response_to_comment {
     max-width: 430px;
     display: flex;
     flex-direction: column;
 }
-.response_to_reviews label {
+.response_to_comment label {
     display: block;
     margin: 10px 0;
     font-size: 15px;
     font-weight: bolder;
 }
-.response_to_reviews .response_input {
+.response_to_comment .response_input {
     position: relative;
 }
-.response_to_reviews .response_input textarea {
+.response_to_comment .response_input textarea {
     height: 100px;
     width: 98.5%;
     resize: none;
 }
-.response_to_reviews .response_input button {
+.response_to_comment .response_input button {
     position: absolute;
     top: 5px;
     left: calc(96% - 10px);
     background-color: transparent;
     border: none;
 }
-.response_to_reviews .response_input button:focus {
+.response_to_comment .response_input button:focus {
     outline: none;
 }
-.response_to_reviews .response_input button i {
+.response_to_comment .response_input button i {
     font-size: 20px;
 }
-.response_to_reviews .publish_response {
+.response_to_comment .publish_response {
     align-self: flex-end;
     padding: 5px 22px;
     background-color: #ededed;
@@ -279,6 +289,7 @@ article .reviews-func a {
     margin-top: 5px;
     color: #979797;
 }
+/*Кнопка, для показа всех отзывов*/
 .show_all_reviews {
     width: 430px;
     padding: 9px 0;
@@ -288,7 +299,9 @@ article .reviews-func a {
     background-color: #ededed;
     font-weight: bold;
 }
-.last-block {
+
+/*Футер*/
+footer {
     height: 50px;
     border: 1px solid lightgray;
     border-top: none;
